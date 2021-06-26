@@ -1,0 +1,26 @@
+{
+  "name": "nodeblog",
+  "version": "1.0.0",
+  "description": "Simple blog website, built on node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "console.log('test')",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "blog",
+    "node",
+    "node.js"
+  ],
+  "author": "DaMER",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.12.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.15",
+    "morgan": "^1.10.0",
+    "typescript": "^4.3.4"
+  }
+}

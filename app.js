@@ -2,6 +2,8 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
+const { requireAuth } = require("./middleware/authMiddleware");
 const blogRoutes = require("./routes/blogRoutes");
 const authRoutes = require("./routes/authRoutes");
 
@@ -28,6 +30,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); // To accept data
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cookieParser());
 
 //
 app.use((request, response, next) => {
@@ -36,16 +39,16 @@ app.use((request, response, next) => {
 });
 
 // Handling Routes
-app.get("/", (request, response) => {
+app.get("/", requireAuth, (request, response) => {
   response.render("home", { title: "NodeBlog | Home" });
 });
 
-app.get("/about", (request, response) => {
+app.get("/about", requireAuth, (request, response) => {
   response.render("about", { title: "NodeBlog | About" });
 });
 
 // Blog Routes
-app.use("/blogs", blogRoutes); // First parameter check, if we're in /blogs route
+app.use("/blogs", requireAuth, blogRoutes); // First parameter check, if we're in /blogs route
 // Auth Routes
 app.use("/auth", authRoutes);
 

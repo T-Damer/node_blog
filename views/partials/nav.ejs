@@ -1,13 +1,18 @@
 <nav>
   <div class="site-title">
-    <a href="/"><h1>Node blog</h1></a>
+    <a href="/blogs"><h1>Node blog</h1></a>
     <p>A pet project of <a href="https://github.com/T-Damer">@T-DaMER</a></p>
   </div>
   <ul>
-    <li><a href="/">Blogs</a></li>
+    <% if (locals.user) { %>
+    <li><a href="/blogs">Blogs</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/blogs/create">Create new blog</a></li>
+    <li><a href="/auth/logout">Log out</a></li>
+    <li style="font-weight: bold">Welcome, <%= locals.user.email %></li>
+    <% } else { %>
     <li><a href="/auth/login">Log in</a></li>
     <li><a href="/auth/signup">Sign up</a></li>
+    <% } %>
   </ul>
 </nav>

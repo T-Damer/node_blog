@@ -3,7 +3,7 @@ const favicon = require("serve-favicon");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-const { requireAuth } = require("./middleware/authMiddleware");
+const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 const blogRoutes = require("./routes/blogRoutes");
 const authRoutes = require("./routes/authRoutes");
 
@@ -43,10 +43,12 @@ app.get("/", requireAuth, (request, response) => {
   response.render("home", { title: "NodeBlog | Home" });
 });
 
-app.get("/about", requireAuth, (request, response) => {
+app.get("/about", requireAuth, checkUser, (request, response) => {
   response.render("about", { title: "NodeBlog | About" });
 });
 
+// All Routes
+app.get("*", checkUser);
 // Blog Routes
 app.use("/blogs", requireAuth, blogRoutes); // First parameter check, if we're in /blogs route
 // Auth Routes

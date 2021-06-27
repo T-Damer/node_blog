@@ -76,3 +76,8 @@ module.exports.login_post = async (request, response) => {
     response.status(400).json({ errors });
   }
 };
+
+module.exports.logout_get = (request, response) => {
+  response.cookie("jwt", "", { maxAge: 1 }); // We just replace existing cookie aka delete
+  response.redirect("/");
+};

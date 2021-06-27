@@ -27,6 +27,7 @@ app.use(favicon(__dirname + "/public/favicon.ico"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); // To accept data
 app.use(morgan("dev"));
+app.use(express.json());
 
 //
 app.use((request, response, next) => {

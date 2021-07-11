@@ -2,12 +2,12 @@ body {
   background: linear-gradient(rgb(251, 146, 146) 0%, rgb(255, 209, 145) 100%);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 body {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 p,
 h1,

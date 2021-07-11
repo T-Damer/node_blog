@@ -1,0 +1,206 @@
+body {
+  background: linear-gradient(rgb(251, 146, 146) 0%, rgb(255, 209, 145) 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Roboto', sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0.2rem;
+  text-decoration: none;
+  color: #ddd;
+}
+
+/* nav & footer styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+  color: white;
+  text-align: right;
+  padding: 0.5rem;
+}
+nav h1 {
+  font-size: 3em;
+  color: white;
+}
+nav p,
+nav a {
+  color: white;
+  font-weight: 300;
+}
+footer {
+  color: white;
+  text-align: center;
+  margin: 80px auto 20px;
+}
+h2 {
+  margin-bottom: 40px;
+  color: white;
+}
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.h3-login {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 1);
+}
+
+div {
+  width: 70%;
+}
+
+form {
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+button {
+  margin-top: 30px;
+  border-radius: 36px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+  background: #fff;
+  box-shadow: 7px 7px 17px #c2c2c2, -7px -7px 17px #fff;
+}
+
+button:hover {
+  border-radius: 51px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 9px 9px 18px #c2c2c2, -9px -9px 18px #ffffff;
+}
+
+button:active {
+  border-radius: 51px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 9px 9px 18px #c2c2c2, -9px -9px 18px #ffffff;
+}
+
+.error {
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 2rem;
+  color: white;
+  background: #ffcc33;
+  padding: 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  margin-left: 20px;
+  width: 80%;
+}
+
+/* index styles */
+.blogs a {
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid crimson;
+}
+.blogs a:hover h3 {
+  color: crimson;
+}
+
+/* details styles */
+.details {
+  position: relative;
+}
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 30%;
+  padding: 8px;
+}
+.delete:hover {
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  color: crimson;
+}
+/* details styles */
+
+/* create styles */
+.create-blog form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.create-blog input,
+.create-blog textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+.create-blog label {
+  display: block;
+  margin-top: 24px;
+}
+textarea {
+  height: 120px;
+}
+.create-blog button {
+  margin-top: 20px;
+  background: crimson;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}

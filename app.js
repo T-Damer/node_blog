@@ -10,8 +10,7 @@ const authRoutes = require('./routes/authRoutes')
 const app = express()
 
 // MongoDB Setup
-const dbURI =
-  'mongodb+srv://damer:<password>@cluster0.yq88b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const dbURI = process.env.MONGOURI
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,

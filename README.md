@@ -1,9 +1,9 @@
 # node_blog
 Simple node blog, where you can login, add and delete messages
 
-
 ![tYoX9Lvout](https://user-images.githubusercontent.com/49658988/125193380-ce3a7580-e254-11eb-9da9-1d398ebbe568.gif)
 
+---
 
 # Steps to install
 
@@ -32,3 +32,7 @@ Simple node blog, where you can login, add and delete messages
 Access using `http://localhost:3000/` - leads to login page
 
 Access to blogs using `http://localhost:3000/blogs` - after you logged in
+
+--- 
+
+<a href="https://www.buymeacoffee.com/tdamer"><img src="https://img.buymeacoffee.com/button-api/?text=Support me with a coffee&emoji=☕️&slug=tdamer&button_colour=ffcc33&font_colour=000&font_family=Lato&outline_colour=000&coffee_colour=000"></a>

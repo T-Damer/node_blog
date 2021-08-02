@@ -4,11 +4,12 @@ const favicon = require('serve-favicon')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
-const { requireAuth, checkUser } = require('./middleware/authMiddleware')
-const blogRoutes = require('./routes/blogRoutes')
-const authRoutes = require('./routes/authRoutes')
+const { requireAuth, checkUser } = require('./src/middleware/authMiddleware')
+const blogRoutes = require('./src/routes/blogRoutes')
+const authRoutes = require('./src/routes/authRoutes')
 
 const app = express()
+app.set('view engine', 'ejs')
 
 // MongoDB Setup
 const dbURI = process.env.MONGOURI

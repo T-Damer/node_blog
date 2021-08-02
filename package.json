@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "console.log('test')",
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "BUILD_PATH='./docs' craco build",
+    "deploy": "gh-pages -d docs",
+    "update": "yarn build && git add . && git commit -m 'update' && git push"
   },
   "keywords": [
     "blog",

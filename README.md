@@ -1,5 +1,9 @@
+![Logo (1)](https://user-images.githubusercontent.com/49658988/127885976-7508b10c-e666-46a1-b019-318d5bc39e47.png)
+
 # node_blog
 Simple node blog, where you can login, add and delete messages
+
+## Demo
 
 ![tYoX9Lvout](https://user-images.githubusercontent.com/49658988/125193380-ce3a7580-e254-11eb-9da9-1d398ebbe568.gif)
 
